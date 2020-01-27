@@ -1,20 +1,20 @@
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
-import Header from '../components/Header';
+import Header from "../components/Header";
 
-import { openMenu } from '../store/reducer';
+import { openMenu, activeTypedText } from "../store/reducer";
 
 const mapStateToProps = state => ({
-  isMenuOpen: state.isMenuOpen,
+  isMenuOpen: state.isMenuOpen
 });
 
 const mapDispatchToProps = dispatch => ({
   openMenu: () => {
     dispatch(openMenu());
   },
+  activeTypedText: () => {
+    dispatch(activeTypedText());
+  }
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(Header);
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

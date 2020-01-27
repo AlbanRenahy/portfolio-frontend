@@ -1,29 +1,44 @@
-import React from 'react';
-import Header from '../../containers/Header';
-import Blocone from '../../containers/Blocone';
-import {Switch, Route} from 'react-router-dom';
-import AOS from 'aos';
-import './app.scss';
+import React from "react";
+import Header from "../../containers/Header";
+import Mainbloc from "../../containers/Mainbloc";
+import { Switch, Route } from "react-router-dom";
+import AOS from "aos";
+import "./app.scss";
 
-
-
- class App extends React.Component {
-
+class App extends React.Component {
   componentDidMount() {
     AOS.init();
   }
 
-   render(){
+  render() {
+    const { openMenu } = this.props;
     return (
-      <>
-        <Header />
-        <Blocone />
-        <Switch>
-          <Route path="/portfolio" />
-        </Switch>
-      </>
+      <Switch>
+        <Route
+          exact
+          path="/"
+          render={() => (
+            <>
+              <Header />
+              <Mainbloc />
+            </>
+          )}
+        />
+        <Route
+          path="/menu"
+          render={() => {
+            openMenu();
+            return (
+              <>
+                <Header />
+                <Mainbloc />
+              </>
+            );
+          }}
+        />
+      </Switch>
     );
   }
 }
 
- export default App;
+export default App;
