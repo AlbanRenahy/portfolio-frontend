@@ -1,11 +1,14 @@
-import React from "react";
-import Header from "../../containers/Header";
-import Mainbloc from "../../containers/Mainbloc";
-import { Switch, Route } from "react-router-dom";
-import AOS from "aos";
-import "./app.scss";
+import React from 'react';
+import Header from '../../containers/Header';
+import Mainbloc from '../../containers/Mainbloc';
+import { Switch, Route } from 'react-router-dom';
+import AOS from 'aos';
+import './app.scss';
+
+
 
 class App extends React.Component {
+
   componentDidMount() {
     AOS.init();
   }
@@ -13,30 +16,24 @@ class App extends React.Component {
   render() {
     const { openMenu } = this.props;
     return (
-      <Switch>
-        <Route
-          exact
-          path="/"
-          render={() => (
+        <Switch>
+          <Route exact path="/" render={() => (
             <>
               <Header />
               <Mainbloc />
-            </>
-          )}
-        />
-        <Route
-          path="/menu"
-          render={() => {
+            </>)}
+          />
+          <Route path="/menu" render={() => {
             openMenu();
             return (
               <>
                 <Header />
                 <Mainbloc />
               </>
-            );
+            )
           }}
-        />
-      </Switch>
+          />
+        </Switch>
     );
   }
 }

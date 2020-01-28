@@ -2,4 +2,10 @@
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+}
+
+.app {
+position: absolute;
+width: 100%;
 } 

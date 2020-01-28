@@ -3,9 +3,8 @@ import { connect } from 'react-redux';
  import Menu from '../components/Menu';
 
 
- const mapStateToProps = (state, ownProps) => ({
+ const mapStateToProps = state => ({
   isMenuOpen: state.isMenuOpen,
-  isMenuOpenFromUrl: ownProps.isMenuOpenFromUrl,
 });
 
  const mapDispatchToProps = {};
