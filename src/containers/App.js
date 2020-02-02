@@ -1,18 +1,21 @@
 import { connect } from 'react-redux';
 
- import App from '../components/App';
+import App from '../components/App';
 
- import { openMenu } from '../store/reducer';
+import { openMenu, changeView } from '../store/reducer';
 
- const mapStateToProps = null;
+const mapStateToProps = null;
 
- const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = dispatch => ({
   openMenu: () => {
     dispatch(openMenu());
   },
+  changeView: (view) => {
+    dispatch(changeView(view));
+  }
 });
 
- export default connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(App); 
+)(App);
