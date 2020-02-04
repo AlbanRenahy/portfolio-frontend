@@ -12,12 +12,14 @@ class Mainbloc extends React.Component {
     document.addEventListener('wheel', function (event) {
       if (!document.querySelector("#mainbloc").classList.contains("open")) {
         if (event.deltaY > 0) {
-          changeView("Welcome");
+          changeView("Bienvenue");
           openMenu();
         }
       }
 
       if (event.deltaY < 0) {
+        console.log("I close the menu from scroll");
+        
         closeMenu();
       }
     }, false);

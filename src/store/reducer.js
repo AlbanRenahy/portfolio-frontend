@@ -3,7 +3,7 @@
  */
 const initialState = {
   isMenuOpen: false,
-  view: "Welcome",
+  view: "Bienvenue",
 };
 
 /**

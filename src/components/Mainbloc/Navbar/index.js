@@ -19,7 +19,7 @@ const Navbar = ({ isMenuOpen, closeMenu, changeView, view }) => {
     <div id="navbar" className={isMenuOpen ? 'open' : ''}>
       <ul className="menu-container">
         <li className="menu-item" onClick={closeMenu}><img id="nav-picture" src={Logo} alt="Alban Renahy picture" /></li>
-        <li className={view === "Welcome" ? "menu-item current" : "menu-item"} onClick={changeActiveView}><Link to={`/menu`}>Bienvenue</Link></li>
+        <li className={view === "Bienvenue" ? "menu-item current" : "menu-item"} onClick={changeActiveView}><Link to={`/menu`}>Bienvenue</Link></li>
         <li className={view === "About" ? "menu-item current" : "menu-item"} onClick={changeActiveView}><Link to={`/about`}>A propos</Link></li>
         <li className={view === "Technologies" ? "menu-item current" : "menu-item"} onClick={changeActiveView}><Link to={`/technologies`}>Technologies</Link></li>
         <li className={view === "Projects" ? "menu-item current" : "menu-item"} onClick={changeActiveView}><Link to={`/projets`}>Projets</Link></li>

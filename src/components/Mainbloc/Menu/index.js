@@ -8,7 +8,7 @@ import './menu.scss';
 
 const Menu = ({ view }) => (
   <div id="menu">
-    {view === "Welcome" && <Welcome />}
+    {view === "Bienvenue" && <Welcome />}
     {view === "Technologies" && <Technologies />}
     {view === "Contact" && <Contact />}
     {view === "About" && <About />}
