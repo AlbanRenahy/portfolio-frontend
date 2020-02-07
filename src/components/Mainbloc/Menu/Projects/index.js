@@ -11,7 +11,7 @@ const Projects = () => (
     <div className="content">
       <div className="text">
         <Typed
-          strings={['Futurs projets web à venir...']}
+          strings={['Premier projet web en construction et bientôt en ligne...']}
           typeSpeed={25}
           backSpeed={10} >
         </Typed>

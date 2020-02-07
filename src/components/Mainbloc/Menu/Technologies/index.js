@@ -12,6 +12,7 @@ const Technologies = () => {
     { name: "CSS3, Sass", icon: "fab fa-sass" },
     { name: "JavaScript", icon: "fab fa-js" },
     { name: "React, Redux", icon: "fab fa-react" },
+    { name: "PHP 7", icon: "fab fa-php" },
     { name: "Symfony (bientôt)", icon: "fab fa-symfony" }
   ];
 
@@ -19,7 +20,7 @@ const Technologies = () => {
     { name: "jQuery", icon: Jquery },
     { name: "Axios", icon: Axios },
     { name: "React Router", icon: ReactRouter },
-    { name: "MySQL", icon: Mysql }
+    { name: "MySQL", icon: Mysql },
   ];
 
   const mainTools = [
@@ -30,7 +31,8 @@ const Technologies = () => {
     { name: "Yarn", icon: "fab fa-yarn" },
     { name: "Npm", icon: "fab fa-npm" },
     { name: "VSCode", icon: "fas fa-code" },
-    { name: "Discord", icon: "fab fa-discord" }
+    { name: "Discord", icon: "fab fa-discord" },
+    { name: "Font Awesome", icon: "fab fa-font-awesome" },
   ];
 
   return (
@@ -74,7 +76,7 @@ const Technologies = () => {
             </div>
           </section>
           <section className="tools" data-aos="fade-left" data-aos-delay="1000">
-            <h2>Tools</h2>
+            <h2>Outils</h2>
             <div className="main-tools">
               {mainTools.map((tool, index) => (
                 <div className="tool" key={"main-tools" + index}>

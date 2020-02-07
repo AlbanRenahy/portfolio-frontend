@@ -1,3 +1,21 @@
-#portfolio {
-
-}
+#about {
+    .about-container {
+      p, h3 {
+        text-align: left;
+      }
+      display: flex !important;
+      justify-content: space-around;
+      div:nth-child(1) {
+        width: 45%;
+      }
+      div:nth-child(2) {
+        width: 45%;
+        text-align: center;
+        overflow-y: auto;
+        max-height: 100%;
+        div {
+          width: 100%;
+        }
+      }
+    }
+  }
