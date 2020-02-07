@@ -79,19 +79,6 @@ class App extends React.Component {
             );
           }}
         />
-        <Route
-          path="/contact"
-          render={() => {
-            openMenu();
-            changeView("Contact");
-            return (
-              <>
-                <Header />
-                <Mainbloc />
-              </>
-            );
-          }}
-        />
         <Route component={Err404} />
       </Switch>
     );

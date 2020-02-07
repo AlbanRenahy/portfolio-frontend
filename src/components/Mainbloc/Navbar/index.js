@@ -23,7 +23,6 @@ const Navbar = ({ isMenuOpen, closeMenu, changeView, view }) => {
         <li className={view === "About" ? "menu-item current" : "menu-item"} onClick={changeActiveView}><Link to={`/about`}>A propos</Link></li>
         <li className={view === "Technologies" ? "menu-item current" : "menu-item"} onClick={changeActiveView}><Link to={`/technologies`}>Technologies</Link></li>
         <li className={view === "Projects" ? "menu-item current" : "menu-item"} onClick={changeActiveView}><Link to={`/projets`}>Projets</Link></li>
-        <li className={view === "Contact" ? "menu-item current" : "menu-item"} onClick={changeActiveView}><Link to={`/contact`}>Contact</Link></li>
       </ul>
     </div>
   );

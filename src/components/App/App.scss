@@ -3,6 +3,141 @@ body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   overflow: hidden;
+
+    // Animated border style
+    .animated-border {
+      position: relative;
+      display: inline-block;
+      margin-top: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      text-align: center;
+    }
+    .animated-border:before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      width: 0;
+      height: 0;
+      background: transparent;
+      border: 2px solid transparent;
+    }
+    .animated-border:before {
+      animation: animate 1s linear forwards;
+    }
+    @keyframes animate {
+      0% {
+        width: 0;
+        height: 0;
+        border-top-color: white;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+        border-right-color: transparent;
+      }
+      50% {
+        width: 100%;
+        height: 0;
+        border-top-color: white;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+        border-right-color: white;
+      }
+      100% {
+        width: 100%;
+        height: 100%;
+        border-top-color: white;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+        border-right-color: white;
+      }
+    }
+    .animated-border:after {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      width: 0;
+      height: 0;
+      background: transparent;
+      border: 2px solid transparent;
+    }
+    .animated-border:after {
+      animation: animate2 1s linear forwards;
+      animation-delay: 1s;
+    }
+    @keyframes animate2 {
+      0% {
+        width: 0;
+        height: 0;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: white;
+        border-right-color: transparent;
+      }
+      50% {
+        width: 0;
+        height: 100%;
+        border-top-color: transparent;
+        border-bottom-color: white;
+        border-left-color: white;
+        border-right-color: transparent;
+      }
+      100% {
+        width: 100%;
+        height: 100%;
+        border-top-color: transparent;
+        border-bottom-color: white;
+        border-left-color: white;
+        border-right-color: transparent;
+      }
+    }
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    .swal2-styled {
+      background-color: $orange !important;
+    }
+  
+    .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step {
+      background: $orange !important;
+    }
+    .swal2-content {
+      font-weight: bold !important;
+    }
+  
+    .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step ~ .swal2-progress-step-line {
+      background: $orange-opaque;
+    }
+  
+    .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step ~ .swal2-progress-step {
+      background: $orange-opaque;
+      color: #fff;
+    }
+  
+    .swal2-progress-steps .swal2-progress-step-line {
+      background: $orange;
+    }
+  
+    .swal2-progress-steps .swal2-progress-step {
+      border-radius: 2em;
+      background: $orange;
+    }
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+  
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: $orange;
+    }
+  
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgb(175, 175, 175);
+    }
 }
 
 .app {

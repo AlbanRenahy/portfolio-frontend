@@ -4,6 +4,7 @@
 const initialState = {
   isMenuOpen: false,
   view: "Bienvenue",
+  isContactOpen: false,
 };
 
 /**
@@ -12,6 +13,8 @@ const initialState = {
 export const OPEN_MENU = 'OPEN_MENU';
 export const CLOSE_MENU = 'CLOSE_MENU';
 export const CHANGE_VIEW = 'CHANGE_VIEW';
+export const OPEN_CONTACT = 'OPEN_CONTACT';
+export const CLOSE_CONTACT = 'CLOSE_CONTACT';
 
 /**
  * Traitements
@@ -37,6 +40,16 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
         view: action.view,
       }
+      case OPEN_CONTACT:
+      return {
+        ...state,
+        isContactOpen: true,
+      };
+    case CLOSE_CONTACT:
+      return {
+        ...state,
+        isContactOpen: false,
+      };
     default:
       return state;
   }
@@ -55,6 +68,12 @@ export const changeView = (view) => ({
   type: CHANGE_VIEW,
   view
 });
+export const openContact = () => ({
+  type: OPEN_CONTACT
+})
+export const closeContact = () => ({
+  type: CLOSE_CONTACT
+})
 
 
 
