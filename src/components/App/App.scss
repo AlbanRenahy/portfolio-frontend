@@ -1,146 +1,221 @@
-@import 'src/style/vars';
+@import "src/style/vars";
+
+// Media Queries
+
+@media screen and (max-width: 1000px) {
+  #app {
+
+    .speechbubble {
+      // New CSS 
+
+      font-size: 17px !important;
+      left: 0px !important;
+      top: 60px !important;
+      padding: 5px 10px;
+      max-width: 220px !important;
+      //  Border and arrow left
+      border-left: 5px solid;
+      &:after {
+
+        bottom: -35px;
+
+      }
+    }
+
+    #header .title h1 {
+      font-size: 30px;
+      letter-spacing: -2px;
+    }
+
+    #mainbloc .content-container {
+      height: 100%;
+      width: 100%;
+    }
+
+    #welcome #animation-container {
+      right: 50px;
+    }
+
+    #contact {
+      position: fixed;
+      bottom: 6px;
+      right: 6px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      .social-media {
+        font-size: 11px;
+      }
+
+      .button {
+        height: 40px;
+        width: 40px;
+        font-size: 12px;
+      }
+    }
+
+    #navbar {
+      background-color: #ffffff;
+      height: 100vh;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: -100%;
+      z-index: 3;
+      transition: 1.3s ease-in-out;
+
+      &.open {
+        top: 0;
+      }
+    }
+  }
+}
+
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   overflow: hidden;
+  font-size: 17px;
+  /* width */
+  // Animated border style
+  .animated-border {
+    position: relative;
+    display: inline-block;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+  }
+  .animated-border:before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 2px solid transparent;
+  }
+  .animated-border:before {
+    animation: animate 1s linear forwards;
+  }
+  @keyframes animate {
+    0% {
+      width: 0;
+      height: 0;
+      border-top-color: white;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+      border-right-color: transparent;
+    }
+    50% {
+      width: 100%;
+      height: 0;
+      border-top-color: white;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+      border-right-color: white;
+    }
+    100% {
+      width: 100%;
+      height: 100%;
+      border-top-color: white;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+      border-right-color: white;
+    }
+  }
+  .animated-border:after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 2px solid transparent;
+  }
+  .animated-border:after {
+    animation: animate2 1s linear forwards;
+    animation-delay: 1s;
+  }
+  @keyframes animate2 {
+    0% {
+      width: 0;
+      height: 0;
+      border-top-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: white;
+      border-right-color: transparent;
+    }
+    50% {
+      width: 0;
+      height: 100%;
+      border-top-color: transparent;
+      border-bottom-color: white;
+      border-left-color: white;
+      border-right-color: transparent;
+    }
+    100% {
+      width: 100%;
+      height: 100%;
+      border-top-color: transparent;
+      border-bottom-color: white;
+      border-left-color: white;
+      border-right-color: transparent;
+    }
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  .swal2-styled {
+    background-color: $orange !important;
+  }
 
-    // Animated border style
-    .animated-border {
-      position: relative;
-      display: inline-block;
-      margin-top: 50px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      text-align: center;
-    }
-    .animated-border:before {
-      content: "";
-      position: absolute;
-      top: -2px;
-      left: -2px;
-      width: 0;
-      height: 0;
-      background: transparent;
-      border: 2px solid transparent;
-    }
-    .animated-border:before {
-      animation: animate 1s linear forwards;
-    }
-    @keyframes animate {
-      0% {
-        width: 0;
-        height: 0;
-        border-top-color: white;
-        border-bottom-color: transparent;
-        border-left-color: transparent;
-        border-right-color: transparent;
-      }
-      50% {
-        width: 100%;
-        height: 0;
-        border-top-color: white;
-        border-bottom-color: transparent;
-        border-left-color: transparent;
-        border-right-color: white;
-      }
-      100% {
-        width: 100%;
-        height: 100%;
-        border-top-color: white;
-        border-bottom-color: transparent;
-        border-left-color: transparent;
-        border-right-color: white;
-      }
-    }
-    .animated-border:after {
-      content: "";
-      position: absolute;
-      top: -2px;
-      left: -2px;
-      width: 0;
-      height: 0;
-      background: transparent;
-      border: 2px solid transparent;
-    }
-    .animated-border:after {
-      animation: animate2 1s linear forwards;
-      animation-delay: 1s;
-    }
-    @keyframes animate2 {
-      0% {
-        width: 0;
-        height: 0;
-        border-top-color: transparent;
-        border-bottom-color: transparent;
-        border-left-color: white;
-        border-right-color: transparent;
-      }
-      50% {
-        width: 0;
-        height: 100%;
-        border-top-color: transparent;
-        border-bottom-color: white;
-        border-left-color: white;
-        border-right-color: transparent;
-      }
-      100% {
-        width: 100%;
-        height: 100%;
-        border-top-color: transparent;
-        border-bottom-color: white;
-        border-left-color: white;
-        border-right-color: transparent;
-      }
-    }
-    ::-webkit-scrollbar {
-      width: 10px;
-    }
-    .swal2-styled {
-      background-color: $orange !important;
-    }
-  
-    .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step {
-      background: $orange !important;
-    }
-    .swal2-content {
-      font-weight: bold !important;
-    }
-  
-    .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step ~ .swal2-progress-step-line {
-      background: $orange-opaque;
-    }
-  
-    .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step ~ .swal2-progress-step {
-      background: $orange-opaque;
-      color: #fff;
-    }
-  
-    .swal2-progress-steps .swal2-progress-step-line {
-      background: $orange;
-    }
-  
-    .swal2-progress-steps .swal2-progress-step {
-      border-radius: 2em;
-      background: $orange;
-    }
-    /* Track */
-    ::-webkit-scrollbar-track {
-      background: #f1f1f1;
-    }
-  
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-      background: $orange;
-    }
-  
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-      background: rgb(175, 175, 175);
-    }
+  .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step {
+    background: $orange !important;
+  }
+  .swal2-content {
+    font-weight: bold !important;
+  }
+
+  .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step ~ .swal2-progress-step-line {
+    background: $orange-opaque;
+  }
+
+  .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step ~ .swal2-progress-step {
+    background: $orange-opaque;
+    color: #fff;
+  }
+
+  .swal2-progress-steps .swal2-progress-step-line {
+    background: $orange;
+  }
+
+  .swal2-progress-steps .swal2-progress-step {
+    border-radius: 2em;
+    background: $orange;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $orange;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(175, 175, 175);
+  }
 }
 
 .app {
-position: absolute;
-width: 100%;
-} 
+  position: absolute;
+  width: 100%;
+}

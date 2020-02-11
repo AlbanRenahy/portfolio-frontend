@@ -7,6 +7,7 @@
   position: absolute;
   left: -20%;
   top: 0;
+  z-index: 3;
   transition: left 0.7s ease-in-out;
 
   &.open {
@@ -51,6 +52,11 @@
   font-size: 2rem;
   width: 100%;
 }
+@media screen and (max-width: 1440px) {
+  .menu-container a {
+    font-size: 1.4rem;
+  }
+}
 .menu-container a:before,
 .menu-container a:after {
   height: 3px;
@@ -70,7 +76,7 @@
   right: 0;
 }
 #nav-picture {
-  width: 60%;
+  width: 150px;
   &:hover {
     cursor: pointer;
 }

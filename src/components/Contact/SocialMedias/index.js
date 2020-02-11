@@ -24,22 +24,22 @@ class SocialMedias extends React.Component {
     return (
       <div className="social-medias">
         <div className="contact-element" data-aos="fade-up" data-aos-delay="600" ref={(element) => this.mail = element}>
-          <a href="mailto:fmackodev@gmail.com" className="social-media">
+          <a href="mailto:albanrenahy.pro@gmail.fr" className="social-media">
             <i className="fas fa-envelope-square fa-4x"></i>
           </a>
         </div>
         <div className="contact-element" data-aos="fade-up" data-aos-delay="400" ref={(element) => this.phone = element}>
-          <a href="tel:+33626277924" className="social-media">
+          <a href="" className="social-media">
             <i className="fas fa-phone-square fa-4x"></i>
           </a>
         </div>
         <div className="contact-element" data-aos="fade-up" data-aos-delay="200" ref={(element) => this.linkedin = element}>
-          <a href="https://www.linkedin.com/in/fabienmacko/" className="social-media">
+          <a href="https://www.linkedin.com/in/alban-renahy-56bba419b/" className="social-media">
             <i className="fab fa-linkedin fa-4x"></i>
           </a>
         </div>
         <div className="contact-element" data-aos="fade-up" ref={(element) => this.github = element}>
-          <a href="https://github.com/fabienmacko" className="social-media">
+          <a href="https://github.com/AlbanRenahy" className="social-media">
             <i className="fab fa-github-square fa-4x"></i>
           </a>
         </div>

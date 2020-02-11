@@ -17,70 +17,72 @@ class App extends React.Component {
   render() {
     const { openMenu, changeView } = this.props;
     return (
-      <Switch>
-        <Route
-          exact
-          path="/"
-          render={() => (
-            <>
-              <Header />
-              <Mainbloc />
-            </>
-          )}
-        />
-        <Route
-          path="/menu"
-          render={() => {
-            openMenu();
-            return (
+      <div id="app">
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={() => (
               <>
                 <Header />
                 <Mainbloc />
               </>
-            );
-          }}
-        />
-        <Route
-          path="/technologies"
-          render={() => {
-            openMenu();
-            changeView("Technologies");
-            return (
-              <>
-                <Header />
-                <Mainbloc />
-              </>
-            );
-          }}
-        />
-        <Route
-          path="/projets"
-          render={() => {
-            openMenu();
-            changeView("Projects");
-            return (
-              <>
-                <Header />
-                <Mainbloc />
-              </>
-            );
-          }}
-        />
-        <Route
-          path="/about"
-          render={() => {
-            openMenu();
-            changeView("About");
-            return (
-              <>
-                <Header />
-                <Mainbloc />
-              </>
-            );
-          }}
-        />
-        <Route component={Err404} />
-      </Switch>
+            )}
+          />
+          <Route
+            path="/menu"
+            render={() => {
+              openMenu();
+              return (
+                <>
+                  <Header />
+                  <Mainbloc />
+                </>
+              );
+            }}
+          />
+          <Route
+            path="/technologies"
+            render={() => {
+              openMenu();
+              changeView("Technologies");
+              return (
+                <>
+                  <Header />
+                  <Mainbloc />
+                </>
+              );
+            }}
+          />
+          <Route
+            path="/projets"
+            render={() => {
+              openMenu();
+              changeView("Projects");
+              return (
+                <>
+                  <Header />
+                  <Mainbloc />
+                </>
+              );
+            }}
+          />
+          <Route
+            path="/about"
+            render={() => {
+              openMenu();
+              changeView("About");
+              return (
+                <>
+                  <Header />
+                  <Mainbloc />
+                </>
+              );
+            }}
+          />
+          <Route component={Err404} />
+        </Switch>
+      </div>
     );
   }
 }
