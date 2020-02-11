@@ -1,53 +1,38 @@
 import React from 'react';
+import SocialMedias from './SocialMedias';
 import './contact.scss';
 
- const Contact = ({ openContact, closeContact, isContactOpen }) => {
+class Contact extends React.Component {
+  
+  componentDidMount() {
+    
+  }
 
-   const handleContactClick = (e) => {
-    console.log(e.target.classList.contains("open"));
-
-     if (e.target.classList.contains("open")) {
+  handleContactClick = (e) => {
+  const {openContact, closeContact} = this.props;
+    if (e.target.classList.contains("open")) {
       closeContact();
     } else {
       openContact();
     }
   };
 
-   return (
+render() {
+  const { isContactOpen } = this.props;
+  return (
     <div id="contact" className={isContactOpen ? "animated-border" : ""}>
       {
-        isContactOpen && (
-          <div className="social-medias">
-            <div className="contact-element" data-aos="fade-up" data-aos-delay="600">
-              <a href="mailto:albanrenahy.pro@gmail.com" className="social-media">
-                <i className="fas fa-envelope-square fa-4x"></i>
-              </a>
-            </div>
-            <div className="contact-element" data-aos="fade-up" data-aos-delay="400">
-              <a href="" className="social-media">
-                <i className="fas fa-phone-square fa-4x"></i>
-              </a>
-            </div>
-            <div className="contact-element" data-aos="fade-up" data-aos-delay="200">
-              <a href="https://www.linkedin.com/in/alban-renahy-56bba419b/" className="social-media">
-                <i className="fab fa-linkedin fa-4x"></i>
-              </a>
-            </div>
-            <div className="contact-element" data-aos="fade-up">
-              <a href="https://github.com/AlbanRenahy" className="social-media">
-                <i className="fab fa-github-square fa-4x"></i>
-              </a>
-            </div>
-          </div>
-        )
+        isContactOpen && <SocialMedias isContactOpen={isContactOpen} />
       }
 
-       <div className={isContactOpen ? "button open" : "button"} onClick={handleContactClick}>
+      <div id="contact-button" className={isContactOpen ? "button open" : "button"} onClick={this.handleContactClick}>
+        <i className="fas fa-times fa-2x"></i>
         <i className="fas fa-ellipsis-v fa-2x"></i>
       </div>
     </div>
   )
+}
 };
 
 
- export default Contact;
+export default Contact;
