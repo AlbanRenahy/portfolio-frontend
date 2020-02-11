@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Logo from '../../../style/images/alban.png';
 import './navbar.scss';
 
-const Navbar = ({ isMenuOpen, closeMenu, changeView, view }) => {
+const Navbar = ({ isMenuOpen, closeMenu, changeView, view, openMenu, openMobileMenu, isMobileMenuOpen }) => {
 
   const changeActiveView = e => {
     var elements = document.querySelectorAll(".menu-item");
@@ -15,7 +15,24 @@ const Navbar = ({ isMenuOpen, closeMenu, changeView, view }) => {
     e.target.closest(".menu-item").classList.add("current");
   }
 
+  const toggleMenu = function(e) {
+    
+    if (isMenuOpen) {
+      setTimeout(() => {
+        closeMenu();
+      }, 0);
+    } else {
+      openMenu();
+    }
+  }
+
   return (
+  <>
+    <button onClick={toggleMenu} class={isMenuOpen ? "hamburger hamburger--slider is-active" : "hamburger hamburger--slider"} type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+    </button>
     <div id="navbar" className={isMenuOpen ? 'open' : ''}>
       <ul className="menu-container">
         <li className="menu-item" onClick={closeMenu}><img id="nav-picture" src={Logo} alt="Alban Renahy picture" /></li>
@@ -25,6 +42,7 @@ const Navbar = ({ isMenuOpen, closeMenu, changeView, view }) => {
         <li className={view === "Projects" ? "menu-item current" : "menu-item"} onClick={changeActiveView}><Link to={`/projets`}>Projets</Link></li>
       </ul>
     </div>
+  </>
   );
 }
 

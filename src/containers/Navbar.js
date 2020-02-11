@@ -2,11 +2,12 @@ import { connect } from 'react-redux';
 
 import Navbar from '../components/Mainbloc/Navbar';
 
-import {closeMenu,changeView} from '../store/reducer';
+import {openMenu,closeMenu,changeView, openMobileMenu} from '../store/reducer';
 
 
 const mapStateToProps = state => ({
   isMenuOpen: state.isMenuOpen,
+  isMobileMenuOpen: state.isMobileMenuOpen,
   view: state.view,
 });
 
@@ -16,7 +17,13 @@ const mapDispatchToProps = dispatch => ({
   },
   changeView: (view) => {
     dispatch(changeView(view));
-  }
+  },
+  openMenu: () => {
+    dispatch(openMenu());
+  },
+  openMobileMenu: () => {
+    dispatch(openMobileMenu());
+  },
 });
 
 export default connect(

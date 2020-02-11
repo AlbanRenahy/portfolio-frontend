@@ -2,58 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import './about.scss';
 
-const Container = ({ pseudo, description, id }) => {
-
-  return (
-    <div key={id} id={id}>
-      <div style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        width: '60%',
-        margin: '0 auto',
-        border: '2px solid #464646',
-        borderRadius: '4px',
-        padding: '20px',
-        marginTop: '20px',
-      }}>
-        <p style={{
-          width: "100%",
-          color: "white",
-        }}>{description}</p>
-        <p style={{
-          alignSelf: "flex-end",
-          fontSize: "1rem",
-          opacity: ".7",
-          color: "white",
-        }}>- {pseudo}</p>
-      </div>
-    </div>
-  )
-}
-class About extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { posts: [] };
-  }
-
-  componentDidMount() {
-    axios.get('http://localhost:3001/comments')
-      .then((response) => {
-        // handle success
-        console.log(response);
-        this.setState({ posts: response.data });
-
-        // document.querySelector("#posts").appendChild("<div>"response"</div>")
-      })
-      .catch((error) => {
-        // handle error
-        console.log(error);
-      })
-  }
-  render() {
-    const { posts } = this.state;
-
+const About = () => {
     return (
       <div id="about">
         <div className="section-title">
@@ -85,14 +34,13 @@ class About extends React.Component {
                 A 24 ans maintenant, j'ai eu la chance de vivre dans plusieurs pays ces dernières années ( Norvège, Australie, Japon ), 
                 avec une activité saisonnière, principalement en hôtellerie/restauration. Je suis donc ouvert au changement et nouvelles expériences. Basé dorénavant en France et pris de passion pour le développement web, ce métier sonne pour moi comme une évidence.<br />
                 </p>
-              <h3>Technology</h3>
+              <h3>Technologie</h3>
               <p>De notre temps, impossible d'échapper au domaine du numérique qui façonne le quotidien. La technologie est maintenant essentielle pour beaucoup d'entre nous, et contribuer à ce domaine en développant applications et sites utiles à la communauté est pour moi un beau privilège et satisfaction.</p>
             </div>
           </div>
         </div>
       </div>
     );
-  }
 }
 
 
