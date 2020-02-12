@@ -13,8 +13,8 @@ const About = () => {
           <div className="text">
             Découvrez mon parcours professionnel et d'autres information à mon sujet
           </div>
-          <div className="about-container animated-border">
-            <div data-aos="fade-left" data-aos-delay="500">
+          <div className="container about-container animated-border">
+            <div className="item" data-aos="fade-left" data-aos-delay="500">
               <h2>Carrière professionnelle</h2>
               <h3>Etudes en développement-web</h3>
               <p>Parlons de l'école O'Clock.
@@ -27,7 +27,7 @@ const About = () => {
                 Très motivé et anthousiaste, je mettrai à disposition mes compétences pour transformer une idée en solution numérique. </p>
             </div>
 
-            <div data-aos="fade-left" data-aos-delay="1000">
+            <div className="item" data-aos="fade-left" data-aos-delay="1000">
               <h2>Passions</h2>
               <h3>Aventure</h3>
               <p>Le sport et les activités outdoor prennent une place importante dans ma vie, en particulier le vélo. <br />

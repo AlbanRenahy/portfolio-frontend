@@ -20,7 +20,7 @@
   top: 0;
   z-index: -1;
   .title {
-    top: 400px;
+    top: 150px;
     height: 100%;
     z-index: 1;
     position: absolute;
@@ -49,6 +49,7 @@
   .background {
     background-image: url('../../style/images/paris.jpg');
     background-position: initial;
+    height: 100vh;
     filter: brightness(70%);
   }
   .mousey {

@@ -53,9 +53,9 @@ const Technologies = () => {
           efficaces pour le développement. <br />
           Ici vous pouvez trouver certains des outils que j'utilise
         </div>
-        <div className="technologies-container animated-border">
+        <div className="container technologies-container animated-border">
           <section
-            className="technologies"
+            className=" item technologies"
             data-aos="fade-left"
             data-aos-delay="500"
           >
@@ -75,7 +75,7 @@ const Technologies = () => {
               ))}
             </div>
           </section>
-          <section className="tools" data-aos="fade-left" data-aos-delay="1000">
+          <section className=" item tools" data-aos="fade-left" data-aos-delay="1000">
             <h2>Outils</h2>
             <div className="main-tools">
               {mainTools.map((tool, index) => (

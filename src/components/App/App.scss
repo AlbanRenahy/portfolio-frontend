@@ -8,16 +8,97 @@
 @media screen and (max-width: 1000px) {
   html, body {margin: 0; height: 100%}
   #app {
+    .animated-border:before, .animated-border:after {
+      border: 1px solid transparent;
+    }
+
+    .about-container:after, .about-container:before {
+      border: none;
+    }
+
+    .section-title {
+      align-items: center;
+      margin: 0 auto;
+    }
+    .btn {
+      width: 100%;
+      height: 35px;
+      line-height: 35px;
+      span {
+        font-size: .7rem;
+      }
+    }
+
+    #technologies .technologies-container {
+      overflow-x:hidden;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #technologies .content img {
+      max-width: 40px;
+    }
+
+    .about-container {
+      width: auto;
+      overflow-y: auto;
+      overflow-x: hidden;
+      .item {
+        font-size: .8rem;
+      }
+      h2, h3 {
+        margin:0;
+      }
+    }
+
+    .container {
+      padding: 10px;
+      margin-top: 30px;
+      .technology, .tool {
+        width: 40px;
+        padding: 2px;
+        font-size: .6rem;
+        p {
+          font-size: .6rem;
+        }
+      }
+      .item {
+        font-size: .6rem;
+        min-width: 250px;
+
+        figure {
+          min-width: 150px;
+          max-height: none;
+          max-width: none;
+          width: 150px;
+          margin: 10px auto;
+          &:before {
+            top: -11px;
+          }
+        }
+      }
+    }
+
+
+    .content {
+      width: 90%;
+      margin-top: 20px;
+      .text {
+        font-size: .7rem;
+      }
+    }
+
     .mousey {
       display: none;
     }
 
-     .title {
+    .title {
       bottom: 100px;
     }
 
     .hamburger {
       display: block;
+      -webkit-tap-highlight-color: transparent;
     }
 
     .speechbubble {
@@ -31,9 +112,7 @@
       //  Border and arrow left
       border-left: 5px solid;
       &:after {
-
         bottom: -35px;
-
       }
     }
 
@@ -43,7 +122,6 @@
     }
 
     #mainbloc .content-container {
-      height: 100%;
       width: 100%;
     }
 
@@ -71,26 +149,31 @@
       }
     }
 
-    #navbar, #navbar-mobile{
+    #navbar, #navbar-mobile {
       background-color: #ffffff;
-      height: 100vh;
       width: 100%;
       position: absolute;
       left: 0;
       top: -110%;
       z-index: 3;
-      transition: 0.5s ease-in-out;
+      transition: 0.4s ease-out;
 
       &.open {
         top: 0;
       }
     }
   }
+  
+}
+
+.swal2-styled.swal2-confirm:focus {
+  outline:0 !important;
 }
 
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
+  overflow: hidden;
   font-size: 17px;
   /* width */
   // Animated border style
@@ -156,6 +239,7 @@ body {
     animation: animate2 1s linear forwards;
     animation-delay: 1s;
   }
+
   @keyframes animate2 {
     0% {
       width: 0;
