@@ -17,6 +17,7 @@ export const CHANGE_VIEW = 'CHANGE_VIEW';
 export const OPEN_CONTACT = 'OPEN_CONTACT';
 export const CLOSE_CONTACT = 'CLOSE_CONTACT';
 export const OPEN_MOBILE_MENU = 'OPEN_MOBILE_MENU';
+export const CLOSE_MOBILE_MENU = 'CLOSE_MOBILE_MENU';
 
 /**
  * Traitements
@@ -42,6 +43,11 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
         isMobileMenuOpen: true,
       };
+      case CLOSE_MOBILE_MENU:
+        return {
+          ...state,
+          isMobileMenuOpen: false,
+        };
     case CHANGE_VIEW:
       return {
         ...state,
@@ -67,6 +73,9 @@ const reducer = (state = initialState, action = {}) => {
  */
 export const openMobileMenu = () => ({
   type: OPEN_MOBILE_MENU,
+});
+export const closeMobileMenu = () => ({
+  type: CLOSE_MOBILE_MENU,
 });
 export const openMenu = () => ({
   type: OPEN_MENU,
