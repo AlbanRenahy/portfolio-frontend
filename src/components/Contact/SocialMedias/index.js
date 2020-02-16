@@ -24,7 +24,7 @@ class SocialMedias extends React.Component {
     return (
       <div className="social-medias">
         <div className="contact-element" data-aos="fade-up" data-aos-delay="600" ref={(element) => this.mail = element}>
-          <a href="mailto:albanrenahy.pro@gmail.fr" target="blank" className="social-media">
+          <a href="mailto:albanrenahy.dev@gmail.com" target="blank" className="social-media">
             <i className="fas fa-envelope-square fa-4x"></i>
           </a>
         </div>

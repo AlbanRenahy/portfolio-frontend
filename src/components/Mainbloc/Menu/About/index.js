@@ -1,20 +1,19 @@
 import React from 'react';
-import axios from 'axios';
 import './about.scss';
 
 const About = () => {
     return (
       <div id="about">
         <div className="section-title">
-          <div data-aos="fade-right">About</div>
+          <div data-aos="fade-right">À propos</div>
           <div className="underline" data-aos="flip-right" data-aos-delay="400"></div>
         </div>
         <div className="content">
           <div className="text">
             Découvrez mon parcours professionnel et d'autres information à mon sujet
           </div>
-          <div className="container about-container animated-border">
-            <div className="item" data-aos="fade-left" data-aos-delay="500">
+          <div className="container about-container animated-border" data-aos="fade-left" data-aos-delay="500">
+            <div className="item" >
               <h2>Carrière professionnelle</h2>
               <h3>Etudes en développement-web</h3>
               <p>Parlons de l'école O'Clock.
@@ -27,7 +26,7 @@ const About = () => {
                 Très motivé et anthousiaste, je mettrai à disposition mes compétences pour transformer une idée en solution numérique. </p>
             </div>
 
-            <div className="item" data-aos="fade-left" data-aos-delay="1000">
+            <div className="item" >
               <h2>Passions</h2>
               <h3>Aventure</h3>
               <p>Le sport et les activités outdoor prennent une place importante dans ma vie, en particulier le vélo. <br />

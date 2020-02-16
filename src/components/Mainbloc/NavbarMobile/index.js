@@ -41,9 +41,9 @@ import './navbarmobile.scss';
 
   return (
   <>
-    <button onClick={toggleMenu} class={isMobileMenuOpen ? "hamburger hamburger--slider is-active" : "hamburger hamburger--slider"} type="button">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
+    <button onClick={toggleMenu} className={isMobileMenuOpen ? "hamburger hamburger--slider is-active" : "hamburger hamburger--slider"} type="button">
+        <span className="hamburger-box">
+          <span className="hamburger-inner"></span>
         </span>
       </button>
     <div id="navbar-mobile" className={isMobileMenuOpen ? 'open' : ''}>
