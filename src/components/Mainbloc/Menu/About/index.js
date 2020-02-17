@@ -23,7 +23,7 @@ const About = () => {
               <h3>Développeur junior</h3>
               <p>A la suite de cette formation, je suis basé actuellement dans la région Hauts-de-France, mais prêt à bouger sur tout le territoire 
                 pour mon premier emploi en tant que développeur junior. Pour cette première expérience professionnelle, je suis plus que jamais désireux de monter en aptitudes et expérience.
-                Très motivé et anthousiaste, je mettrai à disposition mes compétences pour transformer une idée en solution numérique. </p>
+                Très motivé et enthousiaste, je mettrai à disposition mes compétences pour transformer une idée en solution numérique. </p>
             </div>
 
             <div className="item" >
