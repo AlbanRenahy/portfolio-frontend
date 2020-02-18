@@ -10,7 +10,7 @@ const About = () => {
         </div>
         <div className="content">
           <div className="text">
-            Découvrez mon parcours professionnel et d'autres information à mon sujet
+            Découvrez mon parcours professionnel et d'autres informations à mon sujet
           </div>
           <div className="container about-container animated-border" data-aos="fade-left" data-aos-delay="500">
             <div className="item" >
