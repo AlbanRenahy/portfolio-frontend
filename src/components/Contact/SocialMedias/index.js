@@ -29,7 +29,7 @@ class SocialMedias extends React.Component {
           </a>
         </div>
         <div className="contact-element" data-aos="fade-up" data-aos-delay="400" ref={(element) => this.phone = element}>
-          <a href="" target="blank" className="social-media">
+          <a href="#" target="blank" className="social-media">
             <i className="fas fa-phone-square fa-4x"></i>
           </a>
         </div>
