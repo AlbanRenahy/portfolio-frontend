@@ -20,7 +20,6 @@ class Mainbloc extends React.Component {
       }
 
       if (event.deltaY < 0) {
-        console.log("I close the menu from scroll");
         
         openMenu();
       }
