@@ -34,7 +34,7 @@ class SocialMedias extends React.Component {
           </a>
         </div>
         <div className="contact-element" data-aos="fade-up" data-aos-delay="200" ref={(element) => this.linkedin = element}>
-          <a href="https://www.linkedin.com/in/alban-renahy-56bba419b/" target="blank" className="social-media">
+          <a href="https://www.linkedin.com/in/alban-renahy/" target="blank" className="social-media">
             <i className="fab fa-linkedin fa-4x"></i>
           </a>
         </div>
