@@ -1,0 +1,20 @@
+#testimonials {
+    .testimonials-container {
+      height: 320px;
+      .carousel {
+        position: relative;
+        height: 350px;
+        width: 100%;
+        .comment {
+          transition: .6s;
+          position: absolute;
+          opacity: 0;
+          height: 100%;
+          width: 100%;
+          &.open {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }

@@ -95,6 +95,17 @@ class App extends React.Component {
               );
             }}
           />
+          <Route path="/testimonials" render={() => {
+            openMenu();
+            changeView("Testimonials");
+            return (
+              <>
+                <Header />
+                <Mainbloc />
+              </>
+            )
+          }}
+          />
           <Route component={Err404} />
         </Switch>
       </div>
