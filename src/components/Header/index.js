@@ -36,7 +36,7 @@ class Header extends React.Component {
           <div className="title">
             <h1 data-aos="fade-down" data-aos-duration="2000" data-aos-easing="ease-out">ALBAN RENAHY</h1>
             <hr />
-            <h2 data-aos="fade-in" data-aos-duration="400" data-aos-easing="ease-out" data-aos-delay="1700">Développeur web</h2>
+            <h2 data-aos="fade-in" data-aos-duration="400" data-aos-easing="ease-out" data-aos-delay="1700">Web Developer</h2>
             <h2 data-aos="fade-in" data-aos-duration="400" data-aos-easing="ease-out" data-aos-delay="1900">France</h2>
             <div className="mousey" onClick={this.openMainbloc}>
               <div className="scroller"></div>

@@ -5,9 +5,6 @@ import Config from '../../../../particlesjs-config2.json';
 import './welcome.scss';
 
 class Welcome extends React.Component {
-  componentDidMount() {
-    
-  }
 
   render() {
     var { isMenuOpen } = this.props;
@@ -27,9 +24,9 @@ class Welcome extends React.Component {
                 isMenuOpen &&
                 <Typed
                   strings={[
-                    "Bonjour, cher visiteur, bienvenue sur mon site",
-                    "Vous êtes ici sur le menu principal",
-                    "Cliquez sur ce que vous souhaitez savoir à mon propos."
+                    'Hi, dear visitor, welcome to my website.',
+                    'Here you are in the principal menu!',
+                    'Please click on what you want to know about me.'
                 ]}
                   typeSpeed={50}
                   backSpeed={10} >

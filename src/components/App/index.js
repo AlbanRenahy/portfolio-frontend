@@ -10,7 +10,7 @@ class App extends React.Component {
   componentDidMount() {
     AOS.init();
     console.log(
-      "Bonjour! \nJe peux voir que le code est important pour toi. \nComme tu peux le constater, ce site web a été totallement développé avec React.js/Redux sur le modèle d'une one-page application. \nSi tu as aimé et que tu souhaites me contacter, tu peux m'envoyer un message sur LinkedIn ou autre! ☕"
+      "Hello! \nI can see that code is important for you. \nYes, as you can see, this website was fully developed in React.js/Redux like a one-page application. \nIf you loved it and want to get in touch, be sure to send me a message on LinkedIn or other contacts! ☕"
     );
   }
   increaseClickCounter = () => {

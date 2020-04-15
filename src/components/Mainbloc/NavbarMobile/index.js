@@ -19,8 +19,6 @@ import './navbarmobile.scss';
   }
 
    const setDefaultView = () => {
-    console.log("Close menu");
-
      setTimeout(() => {
       closeMenu();
       closeMobileMenu();
@@ -49,10 +47,12 @@ import './navbarmobile.scss';
     <div id="navbar-mobile" className={isMobileMenuOpen ? 'open' : ''}>
       <ul className="menu-container">
         <li className="menu-item" onClick={setDefaultView}><img id="nav-picture" src={Logo} alt="Alban Renahy picture" /></li>
-        <li className={view === "Bienvenue" ? "menu-item current" : "menu-item"} onClick={changeActiveView}><Link to={`/menu`}>Bienvenue</Link></li>
-        <li className={view === "About" ? "menu-item current" : "menu-item"} onClick={changeActiveView}><Link to={`/about`}>A propos</Link></li>
+        <li className={view === "Bienvenue" ? "menu-item current" : "menu-item"} onClick={changeActiveView}><Link to={`/menu`}>Welcome</Link></li>
+        <li className={view === "What can you do?" ? "menu-item current" : "menu-item"} onClick={changeActiveView}><Link to={`/whatcanyoudo`}>What can I do?</Link></li>
+        <li className={view === "About" ? "menu-item current" : "menu-item"} onClick={changeActiveView}><Link to={`/about`}>About</Link></li>
         <li className={view === "Technologies" ? "menu-item current" : "menu-item"} onClick={changeActiveView}><Link to={`/technologies`}>Technologies</Link></li>
-        <li className={view === "Projects" ? "menu-item current" : "menu-item"} onClick={changeActiveView}><Link to={`/projets`}>Projets</Link></li>
+        <li className={view === "Projects" ? "menu-item current" : "menu-item"} onClick={changeActiveView}><Link to={`/projets`}>Projects</Link></li>
+        <li className={view === "Testimonials" ? "menu-item current" : "menu-item"} onClick={changeActiveView}><Link to={`/testimonials`}>Testimonials</Link></li>
       </ul>
     </div>
   </>

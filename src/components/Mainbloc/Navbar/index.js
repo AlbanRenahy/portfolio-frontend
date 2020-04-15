@@ -14,7 +14,12 @@ const Navbar = ({ isMenuOpen, closeMenu, changeView, view, openMenu }) => {
     changeView(e.target.textContent)
     e.target.closest(".menu-item").classList.add("current");
   }
+  const setDefaultView = () => {
 
+    setTimeout(() => {
+      closeMenu();
+    }, 0);
+  }
   const toggleMenu = function(e) {
     
     if (isMenuOpen) {
@@ -35,12 +40,12 @@ const Navbar = ({ isMenuOpen, closeMenu, changeView, view, openMenu }) => {
     </button>
     <div id="navbar" className={isMenuOpen ? 'open' : ''}>
       <ul className="menu-container">
-        <li className="menu-item" onClick={closeMenu}><img id="nav-picture" src={Logo} alt="Alban Renahy picture" /></li>
-        <li className={view === "Bienvenue" ? "menu-item current" : "menu-item"} onClick={changeActiveView}><Link to={`/menu`}>Bienvenue</Link></li>
+        <li className="menu-item" onClick={setDefaultView}><img id="nav-picture" src={Logo} alt="Alban Renahy" /></li>
+        <li className={view === "Bienvenue" ? "menu-item current" : "menu-item"} onClick={changeActiveView}><Link to={`/menu`}>Welcome</Link></li>
         <li className={view === "What can you do?" ? "menu-item current" : "menu-item"} onClick={changeActiveView}><Link to={`/whatcanyoudo`}>What can I do?</Link></li>
-        <li className={view === "About" ? "menu-item current" : "menu-item"} onClick={changeActiveView}><Link to={`/about`}>À propos</Link></li>
+        <li className={view === "About" ? "menu-item current" : "menu-item"} onClick={changeActiveView}><Link to={`/about`}>About</Link></li>
         <li className={view === "Technologies" ? "menu-item current" : "menu-item"} onClick={changeActiveView}><Link to={`/technologies`}>Technologies</Link></li>
-        <li className={view === "Projects" ? "menu-item current" : "menu-item"} onClick={changeActiveView}><Link to={`/projets`}>Projets</Link></li>
+        <li className={view === "Projects" ? "menu-item current" : "menu-item"} onClick={changeActiveView}><Link to={`/projets`}>Projects</Link></li>
         <li className={view === "Testimonials" ? "menu-item current" : "menu-item"} onClick={changeActiveView}><Link to={`/testimonials`}>Testimonials</Link></li>
       </ul>
     </div>

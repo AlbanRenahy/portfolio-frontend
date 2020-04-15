@@ -1,46 +1,96 @@
-import React from 'react';
-import './about.scss';
+import React from "react";
+import "./about.scss";
 
 const About = () => {
-    return (
-      <div id="about">
-        <div className="section-title">
-          <div data-aos="fade-right">À propos</div>
-          <div className="underline" data-aos="flip-right" data-aos-delay="400"></div>
+  return (
+    <div id="about">
+      <div className="section-title">
+        <div data-aos="fade-right">About</div>
+        <div
+          className="underline"
+          data-aos="flip-right"
+          data-aos-delay="400"
+        ></div>
+      </div>
+      <div className="content">
+        <div className="text">
+        Know everything about my proffessionnal career, and personnal passions.
         </div>
-        <div className="content">
-          <div className="text">
-            Découvrez mon parcours professionnel et d'autres informations à mon sujet
-          </div>
-          <div className="container about-container animated-border" data-aos="fade-left" data-aos-delay="500">
-            <div className="item" >
-              <h2>Carrière professionnelle</h2>
-              <h3>Etudes en développement-web</h3>
-              <p>Parlons de l'école O'Clock.
-                C'est une école spécialisée dans le développement web, proposant une formation professionnalisante avec une particularité...Tout se passe en téléprésentiel !
-                J'ai la chance de suivre ces 5 mois intenses d'entrainement, avec une spécialisation en React, puis Symfony très bientôt.
-              </p>
-              <h3>Développeur junior</h3>
-              <p>A la suite de cette formation, je suis basé actuellement dans la région Hauts-de-France, mais prêt à bouger sur tout le territoire 
-                pour mon premier emploi en tant que développeur junior. Pour cette première expérience professionnelle, je suis plus que jamais désireux de monter en aptitudes et expérience.
-                Très motivé et enthousiaste, je mettrai à disposition mes compétences pour transformer une idée en solution numérique. </p>
-            </div>
+        <div
+          className="container about-container animated-border"
+          data-aos="fade-left"
+          data-aos-delay="500"
+        >
+          <div className="item">
+            <h2>Career</h2>
+            <h3>Web development studies</h3>
+            <p>
+              Let's talk about O'clock. It is a school specializing in web
+              developer training, with a particularity ... Everything happens in
+              telepresencial! 5 months of intense training, a specialization in
+              React and at the end, the diploma "Web Developer and Mobile Web
+              Level III" (bac+2).
+            </p>
 
-            <div className="item" >
-              <h2>Passions</h2>
-              <h3>Aventure</h3>
-              <p>Le sport et les activités outdoor prennent une place importante dans ma vie, en particulier le vélo. <br />
-                A 24 ans maintenant, j'ai eu la chance de vivre dans plusieurs pays ces dernières années ( Norvège, Australie, Japon ), 
-                avec une activité saisonnière, principalement en hôtellerie/restauration. Je suis donc ouvert au changement et nouvelles expériences. Basé dorénavant en France et pris de passion pour le développement web, ce métier sonne pour moi comme une évidence.<br />
-                </p>
-              <h3>Technologie</h3>
-              <p>De notre temps, impossible d'échapper au domaine du numérique qui façonne le quotidien. La technologie est maintenant essentielle pour beaucoup d'entre nous, et contribuer à ce domaine en développant applications et sites utiles à la communauté est pour moi un beau privilège et satisfaction.</p>
-            </div>
+            <h3>Ready to work for you</h3>
+            <p>
+              I'm currently based in the region of Lille, France, but ready to
+              move anywhere in Europe for my first job as a web developer. For
+              this first profesional experience, I am more than ever eager to
+              gain skills and knowledge. Very motivated and enthusiastic, I will
+              use my coding skills to provide technological solutions for the
+              collaborators and customers.
+            </p>
+          </div>
+
+          <div className="item">
+            <h2>Objectives</h2>
+            <h3>Improve</h3>
+            <p>
+              At the top of my 24 years old, taking experience and always
+              continue to learn is something essential for me. Passionate by the
+              JavaScript environment, I always need to push my limits, create
+              new applications, learn new librairies/framkeworks, best
+              practices, and over all produce quality code.
+              <br />
+            </p>
+            <h3>FullStack</h3>
+            <p>
+              One of the most interesting part with JavaScript is that you can
+              use this language to build pretty much everything today.
+              Front-end, Back-end, Native Mobile App, Desktop application...
+              JavaScript can be executed on so many various environments, and
+              for me that's his main power, that's also why I love it. Currently
+              I use it to build Web Applications on the web browser, but
+              learning all the stacks of JS such as React Native for mobile,
+              Electron for desktop is something that I want to learn, when the
+              time will allow.
+            </p>
+          </div>
+
+          <div className="item">
+            <h2>Passions</h2>
+            <h3>Adventure</h3>
+            <p>
+              Sport and outdoor activities are an important role in my life,
+              especially cycling and running. I have been lucky enough to live
+              in few countries in recent years (Norway, Australia, Japan), with
+              a seasonal activity, mainly in hotels / restaurants.
+              <br />
+            </p>
+            <h3>Technology</h3>
+            <p>
+              Impossible to escape there being born at this time! Technology is
+              now totaly essential for all of us, and contributing to this new
+              area by developing application is for me a huge priviledge and
+              satisfaction. I also love videogame, especially online PC like
+              LoL, WoW..
+            </p>
           </div>
         </div>
       </div>
-    );
-}
-
+    </div>
+  );
+};
 
 export default About;
