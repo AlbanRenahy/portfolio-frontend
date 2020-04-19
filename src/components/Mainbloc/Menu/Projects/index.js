@@ -3,6 +3,7 @@ import React from 'react';
 import MySwal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import Museo from '../../../../style/images/museo.png';
+import CovidTraker from '../../../../style/images/covid-traker.png'
 import './projects.scss';
 const Portfolio = () => {
   const Swal = withReactContent(MySwal);
@@ -21,6 +22,21 @@ const Portfolio = () => {
       showCloseButton: true,
     })
   }
+
+  const handleCovidTrakerClick = () => {
+    Swal.fire({
+      title: 'Covid-Traker',
+      html:
+      '<div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:10px;margin-bottom: 20px;">' +
+      '<div><img style="width: 100%;" src="'+CovidTraker+'"></div>' +
+      '<div><i>SIMPLE STATISTICS REACT APP ABOUT CORONOVIRUS SPREAD AROUND THE WORLD<i><br><br>This react page is developped by using hooks and materialUI.<br> All the data is fetched from an external API.</div>' +
+      '</div>' +
+      '<a class="swal2-confirm swal2-styled" style="text-decoration: none;font-weight:bold;" target="blank" href="https://covid-traker.netlify.app/">View this app</a>',
+      animation: true,
+      showConfirmButton: false,
+      showCloseButton: true,
+    })
+  }
   return (
     <div id="portfolio">
       <div className="section-title">
@@ -34,9 +50,18 @@ const Portfolio = () => {
         <div className="container sites-container animated-border">
           <div className="item site" data-aos="fade-left" data-aos-delay="200" onClick={handleMuseoClick}>
             <figure className="figure red">
-              <img src={Museo} alt="Polis" />
+              <img src={Museo} alt="Museo" />
               <figcaption>
                 <h2>Museo <span> App</span></h2>
+              </figcaption>
+              <div></div>
+            </figure>
+          </div>
+          <div className="item site" data-aos="fade-left" data-aos-delay="200" onClick={handleCovidTrakerClick}>
+            <figure className="figure red">
+              <img src={CovidTraker} alt="CovidTraker" />
+              <figcaption>
+                <h2>Covid-Traker <span> App</span></h2>
               </figcaption>
               <div></div>
             </figure>
