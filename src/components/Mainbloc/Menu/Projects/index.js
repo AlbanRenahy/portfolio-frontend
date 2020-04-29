@@ -3,7 +3,8 @@ import React from 'react';
 import MySwal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import Museo from '../../../../style/images/museo.png';
-import CovidTraker from '../../../../style/images/covid-traker.png'
+import CovidTraker from '../../../../style/images/covid-traker.png';
+import Chattychatty from '../../../../style/images/chatty-chatty.png';
 import './projects.scss';
 const Portfolio = () => {
   const Swal = withReactContent(MySwal);
@@ -14,7 +15,7 @@ const Portfolio = () => {
       html:
       '<div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:10px;margin-bottom: 20px;">' +
       '<div><img style="width: 100%;" src="'+Museo+'"></div>' +
-      '<div><i>APPLICATION TO SHARE YOUR FAVORITES MUSEUMS & MONUMENTS WITH THE COMMUNITY<i><br><br>The version 1.0 of Museo you are currently browsing was developed in 3 weeks. This site is not finished and continues to be developped<br>This project validates a 6-month training course followed by 5 aspiring developers in the virtual classrooms of Oclock. Besides the intense pleasure of creating "from scratch" a web project, this web app also serves to support the passage of the Professional title of web developer.</div>' +
+      '<div><i>APPLICATION TO SHARE YOUR FAVORITES MUSEUMS & MONUMENTS WITH THE COMMUNITY<i><br><br>The version 1.0 of Museo you are currently browsing was developed in 3 weeks. This site is not finished and continues to be developped<br>This project validates a 6-month training course followed by 5 aspiring developers in the virtual classrooms of Oclock. Besides the intense pleasure of creating "from scratch" a web project, this web app also serves to support the passage of the Professional title of web developer.<br><br>FLASH INFO ! Application temporarily unavailable on April 29, 2020 due to servor hosting problem. I will return the website online as soon as possible. Sorry for the inconvenience<br></div>' +
       '</div>' +
       '<a class="swal2-confirm swal2-styled" style="text-decoration: none;font-weight:bold;" target="blank" href="http://www.museo-map.com/">View this app</a>',
       animation: true,
@@ -37,6 +38,21 @@ const Portfolio = () => {
       showCloseButton: true,
     })
   }
+
+    const handleChattychattyClick = () => {
+      Swal.fire({
+        title: 'Chatty-Chatty',
+        html:
+        '<div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:10px;margin-bottom: 20px;">' +
+        '<div><img style="width: 75%;" src="'+Chattychatty+'"></div>' +
+        '<div><i>MEETING APP TO FIND LOVE, FRIENDSHIP, HELP FOR YOUR PROJECTS, OR JUST MOMENTS TOGETHER<i><br><br>Personal project of a social application currently in progress, with React for frontend, Node.js for backend and MySQL as database. The first version is coming soon! <br><br>Dear developers, you can check the repository on Github ;-)</div>' +
+        '</div>' +
+        '<a class="swal2-confirm swal2-styled" style="text-decoration: none;font-weight:bold;" target="blank" href="https://github.com/AlbanRenahy/Chatty-chatty-Front">View the repository</a>',
+        animation: true,
+        showConfirmButton: false,
+        showCloseButton: true,
+      })
+  }
   return (
     <div id="portfolio">
       <div className="section-title">
@@ -45,7 +61,7 @@ const Portfolio = () => {
       </div>
       <div className="content">
         <div className="text">
-          Here you can find my latest creations.
+          Here you can find my latest creations or current development projects
         </div>
         <div className="container sites-container animated-border">
           <div className="item site" data-aos="fade-left" data-aos-delay="200" onClick={handleMuseoClick}>
@@ -62,6 +78,15 @@ const Portfolio = () => {
               <img src={CovidTraker} alt="CovidTraker" />
               <figcaption>
                 <h2>Covid-Traker <span> App</span></h2>
+              </figcaption>
+              <div></div>
+            </figure>
+          </div>
+          <div className="item site" data-aos="fade-left" data-aos-delay="200" onClick={handleChattychattyClick}>
+            <figure className="figure red">
+              <img src={Chattychatty} alt="Chattychatty" />
+              <figcaption>
+                <h2>Chatty-Chatty <span> App</span></h2>
               </figcaption>
               <div></div>
             </figure>
