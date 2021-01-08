@@ -4,7 +4,8 @@ import MySwal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import Museo from "../../../../style/images/museo.png";
 import CovidTraker from "../../../../style/images/covid-traker.png";
-import Chattychatty from "../../../../style/images/chatty-chatty.png";
+import MyShop from "../../../../style/images/e-commerce.png";
+import EasyFacture from "../../../../style/images/easy-facture.png";
 import Eole from "../../../../style/images/eole.png";
 import Quizzy from "../../../../style/images/quizzy.png";
 import Resto from "../../../../style/images/food-app.png";
@@ -42,7 +43,7 @@ const Portfolio = () => {
         '"></div>' +
         "<div><i>SIMPLE STATISTICS REACT APP ABOUT CORONOVIRUS SPREAD AROUND THE WORLD<i><br><br>This react page is developped by using hooks and materialUI.<br> All the data is fetched from an external API.</div>" +
         "</div>" +
-        '<a class="swal2-confirm swal2-styled" style="text-decoration: none;font-weight:bold;" target="blank" href="https://covid-traker.netlify.app/">View this app</a>'+ 
+        '<a class="swal2-confirm swal2-styled" style="text-decoration: none;font-weight:bold;" target="blank" href="https://covid-traker.netlify.app/">View this app</a>' +
         '<a class="swal2-confirm swal2-styled" style="text-decoration: none;font-weight:bold;" target="blank" href="https://github.com/AlbanRenahy/corona-tracker">Project on GitHub</a>',
       animation: true,
       showConfirmButton: false,
@@ -50,17 +51,35 @@ const Portfolio = () => {
     });
   };
 
-  const handleChattychattyClick = () => {
+  const handleMyShopClick = () => {
     Swal.fire({
-      title: "Chatty-Chatty",
+      title: "My-Shop",
       html:
         '<div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:10px;margin-bottom: 20px;">' +
         '<div><img style="width: 75%;" src="' +
-        Chattychatty +
+        MyShop +
         '"></div>' +
-        "<div><i>MEETING APP TO FIND LOVE, FRIENDSHIP, HELP FOR YOUR PROJECTS, OR JUST MOMENTS TOGETHER<i><br><br>Personal project of a social application currently in progress, with React for frontend, Node.js for backend and MySQL as database. The first version is coming soon! <br><br>Dear developers, you can check the repository on Github ;-)</div>" +
+        "<div><i>CREATE AN ACCOUNT, ADD PRODUCTS TO CART AND BUY THEM<i><br><br>Fake e-shop website, built with Symfony as a fullstack app and MySQL as database. I used Stripe to handle fake payments. The deployment coming soon. You can already see the code on Github ;-)</div>" +
         "</div>" +
-        '<a class="swal2-confirm swal2-styled" style="text-decoration: none;font-weight:bold;" target="blank" href="https://github.com/AlbanRenahy/Chatty-chatty-Front">Project on GitHub</a>',
+        '<a class="swal2-confirm swal2-styled" style="text-decoration: none;font-weight:bold;" target="blank" href="https://github.com/AlbanRenahy/Symfony-e-commerce">Project on GitHub</a>',
+      animation: true,
+      showConfirmButton: false,
+      showCloseButton: true,
+    });
+  };
+
+  const handleEasyFactureClick = () => {
+    Swal.fire({
+      title: "Easy-Facture",
+      html:
+        '<div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:10px;margin-bottom: 20px;">' +
+        '<div><img style="width: 75%;" src="' +
+        EasyFacture +
+        '"></div>' +
+        "<div><i>CREATE, UPDATE AND REMOVE EASILY YOUR CLIENTS AND INVOICES<i><br><br>Invoice handling website, with React for frontend, Symfony for backend and MySQL as database.</div>" +
+        "</div>" +
+        '<a class="swal2-confirm swal2-styled" style="text-decoration: none;font-weight:bold;" target="blank" href="http://easy-facture.herokuapp.com/#/">View this app</a>' +
+        '<a class="swal2-confirm swal2-styled" style="text-decoration: none;font-weight:bold;" target="blank" href="https://github.com/AlbanRenahy/CRM_Project">Project on GitHub</a>',
       animation: true,
       showConfirmButton: false,
       showCloseButton: true,
@@ -77,7 +96,7 @@ const Portfolio = () => {
         '"></div>' +
         "<div><i>SIMPLE REAL TIME WEATHER APP<i><br><br>Built and testing with React/Redux, TypeScript. It uses OpenWeatherData API <br></div>" +
         "</div>" +
-        '<a class="swal2-confirm swal2-styled" style="text-decoration: none;font-weight:bold;" target="blank" href="https://5eaaf7d914a1de0171518910--eole-weather.netlify.app/">View this app</a>'+ 
+        '<a class="swal2-confirm swal2-styled" style="text-decoration: none;font-weight:bold;" target="blank" href="https://5eaaf7d914a1de0171518910--eole-weather.netlify.app/">View this app</a>' +
         '<a class="swal2-confirm swal2-styled" style="text-decoration: none;font-weight:bold;" target="blank" href="https://github.com/AlbanRenahy/Eole">Project on GitHub</a>',
       animation: true,
       showConfirmButton: false,
@@ -95,7 +114,7 @@ const Portfolio = () => {
         '"></div>' +
         "<div><i>AN EXCITING QUIZ GAME WILL THAT ENTERTAIN YOU FOUR HOURS ;-)<i><br><br>I built this project with React / Redux and Typescript. Tests are implemented for each component, and the entirely layout is made with Styled Components. The questions are fecthed from TriviaAPI<br></div>" +
         "</div>" +
-        '<a class="swal2-confirm swal2-styled" style="text-decoration: none;font-weight:bold;" target="blank" href="https://quizzy-app.netlify.app/">View this app</a>'+ 
+        '<a class="swal2-confirm swal2-styled" style="text-decoration: none;font-weight:bold;" target="blank" href="https://quizzy-app.netlify.app/">View this app</a>' +
         '<a class="swal2-confirm swal2-styled" style="text-decoration: none;font-weight:bold;" target="blank" href="https://github.com/AlbanRenahy/quiz-app">Project on GitHub</a>',
       animation: true,
       showConfirmButton: false,
@@ -112,7 +131,7 @@ const Portfolio = () => {
         '"></div>' +
         "<div><i>BASIC WEBSITE WITH INTERACTIVE CONTENT<i><br><br>Built with Reatc/Redux, SASS and some animation tricks. Still in continuous development. The final version is coming soon !</div>" +
         "</div>" +
-        '<a class="swal2-confirm swal2-styled" style="text-decoration: none;font-weight:bold;" target="blank" href="https://alban-restaurantpage.netlify.app/#">View this app</a>'+ 
+        '<a class="swal2-confirm swal2-styled" style="text-decoration: none;font-weight:bold;" target="blank" href="https://alban-restaurantpage.netlify.app/#">View this app</a>' +
         '<a class="swal2-confirm swal2-styled" style="text-decoration: none;font-weight:bold;" target="blank" href="https://github.com/AlbanRenahy/Restaurant-App">Project on GitHub</a>',
       animation: true,
       showConfirmButton: false,
@@ -130,7 +149,7 @@ const Portfolio = () => {
         '"></div>' +
         "<div><i>RESPONSIVE APPLICATION INTERACTING WITH MOVIES API<i><br><br>Built with Reatc/Redux, SASS and some animation tricks. Still in development.</div>" +
         "</div>" +
-        '<a class="swal2-confirm swal2-styled" style="text-decoration: none;font-weight:bold;" target="blank" href="https://movie-cluster.netlify.app/">View this app</a>'+ 
+        '<a class="swal2-confirm swal2-styled" style="text-decoration: none;font-weight:bold;" target="blank" href="https://movie-cluster.netlify.app/">View this app</a>' +
         '<a class="swal2-confirm swal2-styled" style="text-decoration: none;font-weight:bold;" target="blank" href="https://github.com/AlbanRenahy/my-movies">Project on GitHub</a>',
       animation: true,
       showConfirmButton: false,
@@ -148,7 +167,7 @@ const Portfolio = () => {
         '"></div>' +
         "<div><i>RESPONSIVE LANDING PAGE WITH STATISTICS ELEMENTS<i><br><br>Built with Reatc/Redux and Bootstrap.</div>" +
         "</div>" +
-        '<a class="swal2-confirm swal2-styled" style="text-decoration: none;font-weight:bold;" target="blank" href="https://static-elements.netlify.app/">View this app</a>'+ 
+        '<a class="swal2-confirm swal2-styled" style="text-decoration: none;font-weight:bold;" target="blank" href="https://static-elements.netlify.app/">View this app</a>' +
         '<a class="swal2-confirm swal2-styled" style="text-decoration: none;font-weight:bold;" target="blank" href="https://github.com/AlbanRenahy/static-elements">Project on GitHub</a>',
       animation: true,
       showConfirmButton: false,
@@ -166,7 +185,7 @@ const Portfolio = () => {
         '"></div>' +
         "<div><i>MULTISTEP FORM WITH CONTEXT HOOKS<i><br><br>Built with React and hooks</div>" +
         "</div>" +
-        '<a class="swal2-confirm swal2-styled" style="text-decoration: none;font-weight:bold;" target="blank" href="http://test-app-audio-wizard.netlify.app/">View this app</a>'+ 
+        '<a class="swal2-confirm swal2-styled" style="text-decoration: none;font-weight:bold;" target="blank" href="http://test-app-audio-wizard.netlify.app/">View this app</a>' +
         '<a class="swal2-confirm swal2-styled" style="text-decoration: none;font-weight:bold;" target="blank" href="https://github.com/AlbanRenahy/Test-Context-hooks-react">Project on GitHub</a>',
       animation: true,
       showConfirmButton: false,
@@ -208,6 +227,22 @@ const Portfolio = () => {
             className="item site"
             data-aos="fade-left"
             data-aos-delay="200"
+            onClick={handleMyShopClick}
+          >
+            <figure className="figure red">
+              <img src={MyShop} alt="MyShop" />
+              <figcaption>
+                <h2>
+                  My-Shop <span> App</span>
+                </h2>
+              </figcaption>
+              <div></div>
+            </figure>
+          </div>
+          <div
+            className="item site"
+            data-aos="fade-left"
+            data-aos-delay="200"
             onClick={handleCovidTrakerClick}
           >
             <figure className="figure red">
@@ -224,13 +259,13 @@ const Portfolio = () => {
             className="item site"
             data-aos="fade-left"
             data-aos-delay="200"
-            onClick={handleChattychattyClick}
+            onClick={handleEasyFactureClick}
           >
             <figure className="figure red">
-              <img src={Chattychatty} alt="Chattychatty" />
+              <img src={EasyFacture} alt="EasyFacture" />
               <figcaption>
                 <h2>
-                  Chatty-Chatty <span> App</span>
+                  Easy-Facture <span> App</span>
                 </h2>
               </figcaption>
               <div></div>

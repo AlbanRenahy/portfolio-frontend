@@ -1,6 +1,7 @@
 import React from 'react';
 import Mongodb from '../../../../style/images/technos/mongodb.png';
 import Express from '../../../../style/images/technos/express.png';
+import MySQL from '../../../../style/images/technos/mysql.png';
 import Axios from '../../../../style/images/technos/axios.png';
 import ReactRouter from '../../../../style/images/technos/react-router.svg';
 import Postman from '../../../../style/images/technos/postman.png';
@@ -9,19 +10,19 @@ import './technologies.scss';
 const Technologies = () => {
 
   const mainTechnologies = [
-    { name: "HTML5, JSX", icon: "fab fa-html5" },
-    { name: "CSS3, Sass", icon: "fab fa-sass" },
     { name: "JavaScript", icon: "fab fa-js" },
     { name: "React, Redux", icon: "fab fa-react" },
+    { name: "HTML5, JSX", icon: "fab fa-html5" },
+    { name: "CSS3, Sass", icon: "fab fa-sass" },
     { name: "Node.js", icon: "fab fa-node" },
     { name: "PHP 7", icon: "fab fa-php" },
+    { name: "Symfony", icon: "fab fa-symfony" },
   ];
 
   const otherTechnologies = [
+    { name: "MySQL", icon: MySQL },
     { name: "MongoDB", icon: Mongodb },
     { name: "Express.js", icon: Express },
-    { name: "Axios", icon: Axios },
-    { name: "React Router", icon: ReactRouter },
   ];
 
   const mainTools = [

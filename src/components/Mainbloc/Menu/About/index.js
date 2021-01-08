@@ -47,24 +47,20 @@ const About = () => {
             <h2>Objectives</h2>
             <h3>Improve</h3>
             <p>
-              At the top of my 24 years old, taking experience and always
-              continue to learn is something essential for me. Passionate by the
-              JavaScript environment, I always need to push my limits, create
+              At the top of my 25 years old, taking experience and always
+              continue to learn is something essential for me. Passionate by
+              web development, I always need to push my limits, create
               new applications, learn new librairies/framkeworks, best
               practices, and over all produce quality code.
               <br />
             </p>
             <h3>FullStack</h3>
             <p>
-              One of the most interesting part with JavaScript is that you can
-              use this language to build pretty much everything today.
-              Front-end, Back-end, Native Mobile App, Desktop application...
-              JavaScript can be executed on so many various environments, and
-              for me that's his main power, that's also why I love it. Currently
-              I use it to build Web Applications on the web browser, but
-              learning all the stacks of JS such as React Native for mobile,
-              Electron for desktop is something that I want to learn, when the
-              time will allow.
+              Currently I use Javascript and PHP it to build Web Applications,
+              with technologies such as React or Symfony. I also continue to,
+              by creating new website, with NodeJS for example. Continue to improve
+              my basic Javascript and PHP knowledges is the most important thing now.
+              Basicaly, learning new things and improve constantly.
             </p>
           </div>
 
@@ -83,8 +79,7 @@ const About = () => {
               Impossible to escape there being born at this time! Technology is
               now totaly essential for all of us, and contributing to this new
               area by developing application is for me a huge priviledge and
-              satisfaction. I also love videogame, especially online PC like
-              LoL, WoW..
+              satisfaction.
             </p>
           </div>
         </div>
