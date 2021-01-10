@@ -2,8 +2,6 @@ import React from 'react';
 import Mongodb from '../../../../style/images/technos/mongodb.png';
 import Express from '../../../../style/images/technos/express.png';
 import MySQL from '../../../../style/images/technos/mysql.png';
-import Axios from '../../../../style/images/technos/axios.png';
-import ReactRouter from '../../../../style/images/technos/react-router.svg';
 import Postman from '../../../../style/images/technos/postman.png';
 import './technologies.scss';
 
@@ -47,8 +45,7 @@ const Technologies = () => {
       {/* Content */}
       <div className="content">
         <div className="text">
-          Using modern, fast and efficents technologies and tools is something essential for me. <br />
-          Here you can find some of the stuff that I use.
+          Here you can find some of the technologies that I use.
         </div>
         <div className="container technologies-container animated-border">
         <section className="item technologies" data-aos="fade-left" data-aos-delay="200">
