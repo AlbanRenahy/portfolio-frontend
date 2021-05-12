@@ -34,8 +34,7 @@ const About = () => {
 
             <h3>Ready to work for you</h3>
             <p>
-              I'm currently based in the region of Lille, France, but ready to
-              move anywhere in Europe for my first job as a web developer. For
+              I'm currently based in the region of Lille, France. For
               this first profesional experience, I am more than ever eager to
               gain skills and knowledge. Very motivated and enthusiastic, I will
               use my coding skills to provide technological solutions for the
@@ -69,7 +68,7 @@ const About = () => {
             <h3>Adventure</h3>
             <p>
               Sport and outdoor activities are an important role in my life,
-              especially cycling and running. I have been lucky enough to live
+              especially cycling, running and fitness. I have been lucky enough to live
               in few countries in recent years (Norway, Australia, Japan), with
               a seasonal activity, mainly in hotels / restaurants.
               <br />
