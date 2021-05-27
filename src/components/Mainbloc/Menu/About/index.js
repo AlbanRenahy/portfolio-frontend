@@ -53,12 +53,11 @@ const About = () => {
               practices, and over all produce quality code.
               <br />
             </p>
-            <h3>FullStack</h3>
+            <h3>Frontend Developer</h3>
             <p>
-              Currently I use Javascript and PHP it to build Web Applications,
-              with technologies such as React or Symfony. I also continue to,
-              by creating new website, with NodeJS for example. Continue to improve
-              my basic Javascript and PHP knowledges is the most important thing now.
+              I'm mostly using Javascript and PHP to build Web Applications, although I'm 
+              more skilled right now with Frontend developing with technologies like React. 
+              I Continue everyday to improve my coding knowledge and then be able to be effective in any language or technology.
               Basicaly, learning new things and improve constantly.
             </p>
           </div>
@@ -67,7 +66,7 @@ const About = () => {
             <h2>Passions</h2>
             <h3>Adventure</h3>
             <p>
-              Sport and outdoor activities are an important role in my life,
+              Sport and outdoor activities have an important role in my life,
               especially cycling, running and fitness. I have been lucky enough to live
               in few countries in recent years (Norway, Australia, Japan), with
               a seasonal activity, mainly in hotels / restaurants.
@@ -76,9 +75,8 @@ const About = () => {
             <h3>Technology</h3>
             <p>
               Impossible to escape there being born at this time! Technology is
-              now totaly essential for all of us, and contributing to this new
-              area by developing application is for me a huge priviledge and
-              satisfaction.
+              now essential for all of us, and contributing to this new
+              area by developing application is for me a huge satisfaction.
             </p>
           </div>
         </div>

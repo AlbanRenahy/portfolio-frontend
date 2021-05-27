@@ -1,183 +1,14 @@
 @import "src/style/vars";
 
 // Media Queries
-@media screen and (min-width: 1000px){
-  html, body {margin: 0; height: 100%; overflow: hidden;}
-}
 
-@media screen and (max-width: 1000px) {
-  html, body {margin: 0; height: 100%}
-  #app {
-    .animated-border:before, .animated-border:after {
-      border: 1px solid transparent;
-    }
-
-    .about-container:after, .about-container:before {
-      border: none;
-    }
-
-    .section-title {
-      align-items: center;
-      margin: 0 auto;
-    }
-    .btn {
-      width: 100%;
-      height: 35px;
-      line-height: 35px;
-      span {
-        font-size: .7rem;
-      }
-    }
-
-    #technologies .technologies-container {
-      overflow-x:hidden;
-      justify-content: center;
-      align-items: center;
-      padding: 0;
-      margin-top: 20px;
-    }
-
-    #technologies .content img {
-      max-width: 40px;
-    }
-
-    .about-container {
-      width: auto;
-      overflow-y: auto;
-      overflow-x: hidden;
-      height: 320px;
-      .item {
-        font-size: .8rem;
-      }
-      h2, h3 {
-        margin:0;
-      }
-    }
-
-    .container {
-      padding: 10px;
-      margin-top: 30px;
-      .technology, .tool {
-        width: 40px;
-        padding: 2px;
-        font-size: .6rem;
-        p {
-          font-size: .6rem;
-        }
-      }
-      .item {
-        font-size: .6rem;
-        min-width: 250px;
-
-        figure {
-          min-width: 150px;
-          max-height: none;
-          max-width: none;
-          width: 150px;
-          margin: 10px auto;
-          &:before {
-            top: -11px;
-          }
-        }
-      }
-    }
-
-
-    .content {
-      width: 90%;
-      margin-top: 20px;
-      .text {
-        font-size: .7rem;
-      }
-    }
-
-    .mousey {
-      display: none;
-    }
-
-    .title {
-      bottom: 100px;
-    }
-
-    .hamburger {
-      display: block;
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    .speechbubble {
-      // New CSS 
-
-      font-size: 17px !important;
-      left: 0px !important;
-      top: 60px !important;
-      padding: 5px 10px;
-      max-width: 220px !important;
-      //  Border and arrow left
-      border-left: 5px solid;
-      &:after {
-        bottom: -35px;
-      }
-    }
-
-    #header .title h1 {
-      font-size: 30px;
-      letter-spacing: -2px;
-    }
-
-    #mainbloc .content-container {
-      width: 100%;
-    }
-
-    #welcome #animation-container {
-      right: 50px;
-    }
-
-    #contact {
-      position: fixed;
-      bottom: 6px;
-      right: 6px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 10px;
-      .social-media {
-        font-size: 11px;
-      }
-
-      .button {
-        height: 40px;
-        width: 40px;
-        font-size: 12px;
-      }
-    }
-
-    #navbar, #navbar-mobile {
-      background-color: #ffffff;
-      width: 100%;
-      position: absolute;
-      left: 0;
-      top: -110%;
-      z-index: 3;
-      transition: 0.4s ease-out;
-
-      &.open {
-        top: 0;
-      }
-    }
-  }
-  
-}
-
-.swal2-styled.swal2-confirm:focus {
-  outline:0 !important;
-}
 
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   overflow: hidden;
-  font-size: 17px;
+  font-size: 18px;
+
   /* width */
   // Animated border style
   .animated-border {
@@ -189,6 +20,7 @@ body {
     justify-content: space-around;
     text-align: center;
   }
+
   .animated-border:before {
     content: "";
     position: absolute;
@@ -199,9 +31,11 @@ body {
     background: transparent;
     border: 2px solid transparent;
   }
+
   .animated-border:before {
     animation: animate 1s linear forwards;
   }
+
   @keyframes animate {
     0% {
       width: 0;
@@ -211,6 +45,7 @@ body {
       border-left-color: transparent;
       border-right-color: transparent;
     }
+
     50% {
       width: 100%;
       height: 0;
@@ -219,6 +54,7 @@ body {
       border-left-color: transparent;
       border-right-color: white;
     }
+
     100% {
       width: 100%;
       height: 100%;
@@ -228,6 +64,7 @@ body {
       border-right-color: white;
     }
   }
+
   .animated-border:after {
     content: "";
     position: absolute;
@@ -238,6 +75,7 @@ body {
     background: transparent;
     border: 2px solid transparent;
   }
+
   .animated-border:after {
     animation: animate2 1s linear forwards;
     animation-delay: 1s;
@@ -252,6 +90,7 @@ body {
       border-left-color: white;
       border-right-color: transparent;
     }
+
     50% {
       width: 0;
       height: 100%;
@@ -260,6 +99,7 @@ body {
       border-left-color: white;
       border-right-color: transparent;
     }
+
     100% {
       width: 100%;
       height: 100%;
@@ -269,25 +109,29 @@ body {
       border-right-color: transparent;
     }
   }
+
   ::-webkit-scrollbar {
     width: 5px;
   }
+
   .swal2-styled {
     background-color: $orange !important;
+    box-shadow: none !important;
   }
 
   .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step {
     background: $orange !important;
   }
-  .swal2-content {
-    font-weight: bold !important;
+
+  .swal2-popup {
+      width: 60em;
   }
 
-  .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step ~ .swal2-progress-step-line {
+  .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step-line {
     background: $orange-opaque;
   }
 
-  .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step ~ .swal2-progress-step {
+  .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step {
     background: $orange-opaque;
     color: #fff;
   }
@@ -300,6 +144,7 @@ body {
     border-radius: 2em;
     background: $orange;
   }
+
   /* Track */
   ::-webkit-scrollbar-track {
     background: #f1f1f1;
@@ -319,4 +164,190 @@ body {
 .app {
   position: absolute;
   width: 100%;
+}
+
+
+@media screen and (max-width: 1350px) {
+
+  html,
+  body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  #app {
+    #testimonials .testimonials-container {
+      height: 300px;
+    }
+
+    .animated-border:before,
+    .animated-border:after {
+      border: 1px solid transparent;
+    }
+
+    .about-container:after,
+    .about-container:before {
+      border: none;
+    }
+
+    .section-title {
+      align-items: center;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      width: 100%;
+      height: 35px;
+      line-height: 35px;
+
+    }
+
+    #technologies .technologies-container {
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    #technologies .content img {
+      max-width: 40px;
+    }
+
+    .about-container {
+      overflow-y: auto;
+      overflow-x: hidden;
+
+      .item {
+        width: 100% !important;
+      }
+
+      h3 {
+        margin: 5px 0;
+      }
+
+      h2 {
+        margin: 15px 0;
+      }
+    }
+
+    .container {
+      padding: 10px;
+      margin-top: 30px;
+
+      .technology,
+      .tool {
+        width: 100px;
+        padding: 2px;
+      }
+
+      .item {
+        min-width: 250px;
+
+        figure {
+          max-height: none;
+          max-width: none;
+          width: 300px;
+          margin: 10px auto;
+
+          &:before {
+            top: -11px;
+          }
+        }
+      }
+      
+
+    }
+
+    .content {
+      width: 90%;
+      margin-top: 20px;
+
+    }
+
+    .mousey {
+      display: none;
+    }
+
+    .title {
+      bottom: 100px;
+    }
+
+    .hamburger {
+      display: block;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .speechbubble {
+      font-size: 17px !important;
+    }
+
+    #header .title h1 {
+      font-size: 30px;
+      letter-spacing: -2px;
+    }
+
+    #mainbloc .content-container {
+      width: 100%;
+    }
+
+    #welcome #animation-container {
+      
+    }
+
+    #contact {
+      position: fixed;
+      bottom: 6px;
+      right: 6px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+
+      .social-media {
+        font-size: 11px;
+      }
+
+      .button {
+        height: 40px;
+        width: 40px;
+        font-size: 12px;
+      }
+    }
+
+    #navbar,
+    #navbar-mobile {
+      background-color: #ffffff;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: -110%;
+      z-index: 3;
+      transition: 0.4s ease-out;
+
+      &.open {
+        top: 0;
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 615px) {
+  #app {
+    .technology,
+    .tool {
+      width: 40px !important;
+      padding: 2px;
+    }
+
+    .speechbubble {
+      max-width: 210px !important;
+      top: 6% !important
+    }
+  
+  }
+
 }
