@@ -14,13 +14,14 @@
 
 #navbar {
   background-color: #ffffff;
-  height: 100vh;
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
   width: 20%;
   position: absolute;
   left: -20%;
   top: 0;
   z-index: 3;
-  transition: left 0.7s ease-in-out;
+  transition: left 1.3s ease-in-out;
 
   &.open {
     left: 0;
@@ -87,12 +88,8 @@
   bottom: 0;
   right: 0;
 }
-#nav-picture {
-  width: 150px;
-  &:hover {
-    cursor: pointer;
-}
-  
+#nav-logo:hover {
+  cursor: pointer;
 }
 .menu-container a:hover,
 .menu-container .current a {
@@ -103,6 +100,10 @@
 .menu-container a:hover:after,
 .menu-container .current a:after {
   width: 100%;
+}
+
+#nav-picture{
+  width: 150px;
 }
 
 }

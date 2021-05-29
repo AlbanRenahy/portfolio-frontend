@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import Logo from '../../../style/images/alban.png';
 import './navbarmobile.scss';
 
- const NavbarMobile = ({ isMenuOpen, closeMenu, changeView, view, openMenu, isMobileMenuOpen, openMobileMenu, closeMobileMenu }) => {
+const NavbarMobile = ({ closeMenu, changeView, view, openMenu, isMobileMenuOpen, openMobileMenu, closeMobileMenu }) => {
 
-   const changeActiveView = e => {
+  const changeActiveView = e => {
 
-     closeMobileMenu()
+    closeMobileMenu()
 
-     var elements = document.querySelectorAll(".menu-item");
+    var elements = document.querySelectorAll(".menu-item");
     for (let i = 0; i < elements.length; i++) {
       const element = elements[i];
       element.classList.remove("current");
@@ -18,19 +18,20 @@ import './navbarmobile.scss';
     e.target.closest(".menu-item").classList.add("current");
   }
 
-   const setDefaultView = () => {
-     setTimeout(() => {
+  const setDefaultView = () => {
+
+    setTimeout(() => {
       closeMenu();
       closeMobileMenu();
     }, 0);
   }
 
-   const toggleMenu = function(e) {
+  const toggleMenu = function (e) {
 
-     if (isMobileMenuOpen) {
-        closeMobileMenu();
+    if (isMobileMenuOpen) {
+      closeMobileMenu();
 
-     } else {
+    } else {
       openMobileMenu();
       openMenu();
     }
@@ -46,7 +47,7 @@ import './navbarmobile.scss';
       </button>
     <div id="navbar-mobile" className={isMobileMenuOpen ? 'open' : ''}>
       <ul className="menu-container">
-        <li className="menu-item" onClick={setDefaultView}><img id="nav-picture" src={Logo} alt="Alban Renahy" /></li>
+        <li className="menu-item" onClick={setDefaultView}><img id="nav-picture" src={Logo} alt="alban Renahy" /></li>
         <li className={view === "Bienvenue" ? "menu-item current" : "menu-item"} onClick={changeActiveView}><Link to={`/menu`}>Welcome</Link></li>
         <li className={view === "What can you do?" ? "menu-item current" : "menu-item"} onClick={changeActiveView}><Link to={`/whatcanyoudo`}>What can I do?</Link></li>
         <li className={view === "About" ? "menu-item current" : "menu-item"} onClick={changeActiveView}><Link to={`/about`}>About</Link></li>
